@@ -1,0 +1,18 @@
+.navbar {
+    background-color: #F8F9FA;
+}
+
+.user-avatar {
+    width: 3.1em;
+    height: 3.1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #E2243B;
+    color: #fff;
+    border-radius: 50%;
+}
+
+.user-avatar spam {
+    font-size: xx-large;
+}
