@@ -1,0 +1,33 @@
+.card-header {
+    height: 5rem;
+    background-color: #03DAC5;
+}
+
+.card-header h4 {
+    color: #fff;
+}
+
+.active .btnn {
+    background-color: #03DAC5 !important;
+}
+
+.header-task-list div {
+    color: #6C757D;
+}
+
+.bi {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.bi.bi-trash {
+    color: #E2243B;
+}
+
+.bi.bi-pencil {
+    color: #007BFF;
+}
+
+.modal.edit-task {
+    display: block;
+}

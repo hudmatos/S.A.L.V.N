@@ -1,4 +1,4 @@
-import './CourseCard.css'
+import '../Styles.css'
 
 function CourseCard() {
     return(
