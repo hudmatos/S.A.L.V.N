@@ -1,0 +1,7 @@
+{
+    "tasks" : [
+        {"id" : 1 ,"title": "Prova P1", "type" : "Prova", "date" : "15/10/2024" },
+        {"id" : 2,"title": "Prova P2", "type" : "Prova", "date" : "16/10/2024" },
+        {"id" : 3,"title": "Resumo", "type" : "Trabalho", "date" : "17/10/2024" }
+]
+}

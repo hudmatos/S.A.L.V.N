@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import { useState } from "react"
 import '../Styles.css'
 import TaskList from './TaskList'
-import EditTaskModal from './EditTaskModal'
 
-function Tab() {
+function Tab(props) {
     const [btnActive, setBtnActive] = useState(1)
 
     function toggleBtnActive(index) {
@@ -35,13 +34,13 @@ function Tab() {
         </nav>
         <div className="tab-content" id="nav-tabContent">
             <div className={`tab-pane fade p-4 ${btnActive == 1 ? 'show active' : ''}`} id="nav-home">
-                <TaskList/>
+                <TaskList tasks={props.tasks} />
             </div>
             <div className={`tab-pane fade ${btnActive == 2 ? 'show active' : ''}`} id="nav-profile">
                 Oi
             </div>
         </div>
-        <EditTaskModal />
+        
         </>
         
 

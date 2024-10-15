@@ -1,14 +1,22 @@
+import { useState } from "react"
 
 
 function EditTaskModal() {
+    const [isActive, setIsActive] = useState(false)
+
+    function closeModal() {
+        setIsActive(false)
+    }
+
+
     return (
         <>
-            <div className="modal fade show edit-task">
+            <div className={`modal ${isActive ? 'fade show' : 'hidden'} edit-task`}>
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
                             <h5 className="modal-title">Adicionar Atividade</h5>
-                            <div className="close-modal">
+                            <div className="close-modal" onClick={closeModal}>
                                 <i className="bi bi-x-lg"></i>
                             </div>
                         </div>

@@ -1,8 +1,27 @@
 import NavBar from "../../components/static/NavBar"
 import Tab from "./components/Tab"
 import './Styles.css'
+import { useEffect, useState } from "react"
 
 function GradeEntry() {
+
+    const [tasks, setTasks] = useState([])
+
+   useEffect(()=> {
+    fetch("http://localhost:3000/tasks", {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'Aaplication/json'
+        }
+    })
+    .then((resp)=> resp.json())
+    .then((data)=> {
+        setTasks(data)
+        console.log(data)
+    })
+    .catch((err)=> console.log(err))
+   }, [])
+
     return (
         <>
         <NavBar />
@@ -15,7 +34,7 @@ function GradeEntry() {
             </div>
             <div className="row">
                 <div className="col-md">
-                    <Tab />
+                    <Tab tasks={tasks}/>
                 </div>
             </div>
         </div>
