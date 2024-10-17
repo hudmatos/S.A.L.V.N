@@ -11,7 +11,7 @@
     color: #fff;
 }
 
-.active .btnn {
+.active .btn {
     background-color: #03DAC5 !important;
 }
 
@@ -30,5 +30,9 @@
 
 .bi.bi-pencil {
     color: #007BFF;
+}
+
+.edit-task-modal {
+    display: block;
 }
 

@@ -1,7 +1,25 @@
 {
-    "tasks" : [
-        {"id" : 1 ,"title": "Prova P1", "type" : "Prova", "date" : "15/10/2024" },
-        {"id" : 2,"title": "Prova P2", "type" : "Prova", "date" : "16/10/2024" },
-        {"id" : 3,"title": "Resumo", "type" : "Trabalho", "date" : "17/10/2024" }
-]
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Prova P1 editado",
+      "type": "Prova",
+      "date": "2024-10-02T14:48",
+      "subject_id": 5
+    },
+    {
+      "id": "2",
+      "title": "Prova P2",
+      "type": "Prova",
+      "date": "2024-10-03T14:48",
+      "subject_id": 5
+    },
+    {
+      "id": "3",
+      "title": "Resumo",
+      "type": "Trabalho",
+      "date": "2024-10-04T14:48",
+      "subject_id": 5
+    }
+  ]
 }
