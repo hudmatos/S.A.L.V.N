@@ -1,8 +1,7 @@
 import { useState } from "react";
 
-function EditTaskModal({onClose, taskData, changeItem}) {
-
-    const [task, setTask] = useState(taskData || {})
+function EditTaskModal({taskData, onClose, sendRequest}) {
+    const [task, setTask] = useState(taskData)
 
     function handleChange(e) {
         setTask({ ...task, [e.target.name]: e.target.value })
@@ -14,30 +13,7 @@ function EditTaskModal({onClose, taskData, changeItem}) {
 
     function submit(e) {
         e.preventDefault()
-        if(taskData) {
-            updateTask(task)
-        }
-    }
-
-    function createTask(task) {
-        fetch("http://localhost:3000/tasks", {
-            method: "POST",
-            headers: { 'Content-Type': 'Aplication/json' },
-            body: JSON.stringify(task)
-        })
-        .then((resp) => resp.json())
-        .then((data) => console.log("Criado com sucesso " + data))  
-   }
-
-   function updateTask(task) {
-        fetch(`http://localhost:3000/tasks/${task.id}`, {
-            method: "PATCH",
-            headers: { 'Content-Type': 'Aplication/json' },
-            body: JSON.stringify(task)
-        })
-        .then(changeItem(task))
-        .then(onClose)
-        .catch((err)=> console.log(err))
+        sendRequest(task)
     }
 
     return (
@@ -70,11 +46,11 @@ function EditTaskModal({onClose, taskData, changeItem}) {
                                         className="form-control" 
                                         name="type"
                                         id="task-type"
+                                        value={task.type || ''}
                                         onChange={handleTaskType}>
-                                        <option>{ task.type }</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                                        <option disabled></option>
+                                        <option value="1">Prova</option>
+                                        <option value="2">Trabalho</option>
                                     </select>
                                 </div>
                                 <div className="form-group">

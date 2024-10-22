@@ -1,8 +1,8 @@
 import { useState } from "react"
 import '../Styles.css'
-import TaskList from './TaskList'
 
-function Tab() {
+
+function Tab({tasksSection, studentSection}) {
     const [btnActive, setBtnActive] = useState(1)
 
     function toggleBtnActive(index) {
@@ -14,7 +14,7 @@ function Tab() {
         <>
         <nav>
             <div className="nav nav-tabs" id="nav-tab" role="tablist">
-                <div className="col-md-6">
+                <div className="col-md-6 p-0">
                     <button 
                         className={`nav-link w-100 ${ btnActive == 1 ? 'active' : '' }`} 
                         onClick={() => toggleBtnActive(1)}
@@ -22,7 +22,7 @@ function Tab() {
                         ATIVIDADES
                     </button>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6 p-0">
                 <button 
                         className={`nav-link w-100 ${ btnActive == 2 ? 'active' : '' }`} 
                         onClick={() => toggleBtnActive(2)}
@@ -33,11 +33,13 @@ function Tab() {
             </div>
         </nav>
         <div className="tab-content" id="nav-tabContent">
-            <div className={`tab-pane fade p-4 ${btnActive == 1 ? 'show active' : ''}`} id="nav-home">
-                <TaskList />
+            <div className={`tab-pane fade p-4 ${btnActive == 1 ? 'show active' : ''}`}>
+                { tasksSection }
             </div>
-            <div className={`tab-pane fade ${btnActive == 2 ? 'show active' : ''}`} id="nav-profile">
-                Oi
+            <div className={`tab-pane fade ${btnActive == 2 ? 'show active' : ''}`}>
+                <div className="section-content">
+                { studentSection }
+                </div>
             </div>
         </div>
         
