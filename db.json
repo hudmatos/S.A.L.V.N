@@ -6,5 +6,85 @@
       "type": "Prova",
       "date": "2012-12-12T12:12"
     }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "ciências da computação"
+    },
+    {
+      "id": 2,
+      "title": "física"
+    },
+    {
+      "id": 3,
+      "title": "engenharia"
+    }
+  ],
+  "subjects": [
+    {
+      "id": 1,
+      "title": "óptica",
+      "workload": 30,
+      "semester":  3,
+      "course_id": 2
+    },
+    {
+      "id": 2,
+      "title": "mecânica",
+      "workload": 30,
+      "semester":  3,
+      "course_id": 2
+    },
+    {
+      "id": 3,
+      "title": "ondulatória",
+      "workload": 30,
+      "semester":  3,
+      "course_id": 2
+    },
+    {
+      "id": 4,
+      "title": "banco de dados",
+      "workload": 30,
+      "semester":  3,
+      "course_id": 1
+    },
+    {
+      "id": 5,
+      "title": "estrutura de dados",
+      "workload": 30,
+      "semester":  2,
+      "course_id": 1
+    },
+    {
+      "id": 6,
+      "title": "circuitos lógicos",
+      "workload": 30,
+      "semester":  2,
+      "course_id": 1
+    },
+    {
+      "id": 7,
+      "title": "calculo 1",
+      "workload": 30,
+      "semester":  3,
+      "course_id": 1
+    },
+    {
+      "id": 8,
+      "title": "mecânica da partícula",
+      "workload": 30,
+      "semester":  3,
+      "course_id": 2
+    },
+    {
+      "id": 9,
+      "title": "técnologias das contruções",
+      "workload": 30,
+      "semester":  2,
+      "course_id": 3
+    }
   ]
+
 }
